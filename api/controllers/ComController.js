@@ -8,7 +8,12 @@
 module.exports = {
 
   hi:function (req,res) {
-    res.send("result")
+    var params=req.allParams()
+    if (params.usr) {
+    res.send(params.usr+"被点击了")    
+    }else{
+    res.send("emmmm....")      
+    }
   }
 
 };
